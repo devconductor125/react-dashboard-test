@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { WalletIcon, ArchiveBoxIcon, CurrencyDollarIcon } from "@heroicons/react/24/solid";
 
-import reactLogo from "../assets/react.svg";
+import avatar from "../assets/avatar.png";
 import card1 from "../assets/card1.svg";
 import card2 from "../assets/card2.svg";
 import income from "../assets/income.svg";
@@ -61,11 +61,11 @@ export default function Dashboard() {
 			<div className="w-100 flex justify-between ">
 				<div className="text-3xl font-bold">Good morning, Amelia!</div>
 				<div>
-					<img src={reactLogo}></img>
+					<img src={avatar} className="rounded-3xl" width={50} height={50}></img>
 				</div>
 			</div>
 			<div className="grid grid-cols-12 mt-3 gap-4 lg:gap-6 sm:gap-4 xl:gap-8">
-				<div className="col-span-7 ">
+				<div className="col-span-12 lg:col-span-7">
 					<div className="text-left">
 						<span className="text-2xl font-bold">
 							Cards<span className="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">2</span>
@@ -142,7 +142,7 @@ export default function Dashboard() {
 						</div>
 					</div>
 				</div>
-				<div className="col-span-5">
+				<div className="col-span-12 lg:col-span-5">
 					<div className="text-left w-full">
 						<span className="text-2xl font-bold">Current Balance</span>
 						<div className="mt-2 text-center w-full">
@@ -181,10 +181,10 @@ export default function Dashboard() {
 							</div>
 						</div>
 					</div>
-          <div className="w-full border border-gray-300 rounded-2xl mt-4 h-[calc(100vh-400px)] flex justify-center items-center flex-col">
+          <div className="w-full border border-gray-300 rounded-2xl mt-4 h-[calc(100vh-400px)] flex justify-center items-center flex-col lg:px-24 px-10">
             <CurrencyDollarIcon width={50} height={50} color="gray"/>
-            <p className="mt-6">You don’t have any loans now.</p>
-            <p className="mt-3 w-30">If you like to take a loan, press the button to know more</p>
+            <p className="mt-6 font-bold">You don’t have any loans now.</p>
+            <p className="mt-3">If you like to take a loan, press the button to know more</p>
             <p className="mt-3 btn btn-blue">
               <button>Take a loan</button>
             </p>
