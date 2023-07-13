@@ -16,9 +16,9 @@ export default function Dashboard() {
 			{
 				name: {
 					avatar: "https://ui-avatars.com/api/?name=John+Doe&background=0D8ABC&color=fff",
-					name: "Coffee Shop",
+					name: "Airplane ticket",
 				},
-				date: "2023-02-05",
+				date: "10 Jul, 2023",
 				amount: 2456,
 			},
 			{
@@ -26,31 +26,31 @@ export default function Dashboard() {
 					avatar: "https://ui-avatars.com/api/?name=William+Doe&background=0D8ABC&color=fff",
 					name: "Coffee Shop",
 				},
-				date: "2023-2-5",
+				date: "10 Jul, 2023",
 				amount: 10,
 			},
 			{
 				name: {
 					avatar: "https://ui-avatars.com/api/?name=Lunny+Ronald&background=0D8ABC&color=fff",
-					name: "Coffee Shop",
+					name: "Marie M.",
 				},
-				date: "2023-2-5",
+				date: "10 Jul, 2023",
 				amount: 20,
 			},
 			{
 				name: {
 					avatar: "https://ui-avatars.com/api/?name=Christian+Rodrigo&background=0D8ABC&color=fff",
-					name: "Coffee Shop",
+					name: "Gym",
 				},
-				date: "2023-2-5",
+				date: "10 Jul, 2023",
 				amount: 300,
 			},
 			{
 				name: {
 					avatar: "https://ui-avatars.com/api/?name=Jhon+Rambo&background=0D8ABC&color=fff",
-					name: "Coffee Shop",
+					name: "Gas",
 				},
-				date: "2023-2-5",
+				date: "10 Jul, 2023",
 				amount: 39,
 			},
 		]);
@@ -58,7 +58,7 @@ export default function Dashboard() {
 
 	return (
 		<>
-			<div className="w-100 flex justify-between ">
+			<div className="w-100 flex justify-between font-satoshi">
 				<div className="text-3xl font-bold">Good morning, Amelia!</div>
 				<div>
 					<img src={avatar} className="rounded-3xl" width={50} height={50}></img>
@@ -67,8 +67,8 @@ export default function Dashboard() {
 			<div className="grid grid-cols-12 mt-3 gap-4 lg:gap-6 sm:gap-4 xl:gap-8">
 				<div className="col-span-12 lg:col-span-7">
 					<div className="text-left">
-						<span className="text-2xl font-bold">
-							Cards<span className="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">2</span>
+						<span className="text-2xl font-bold flex items-center">
+							Cards<span className="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-100 rounded">2</span>
 						</span>
 					</div>
 					<div className="grid grid-cols-12 mt-2 gap-3">
@@ -107,16 +107,16 @@ export default function Dashboard() {
 						</div>
 						<div className="mt-2">
 							<div className="relative overflow-x-auto">
-								<table className="w-full text-left">
+								<table className="w-full text-left font-satoshi">
 									<thead className="">
 										<tr>
-											<th scope="col" className=" py-3 rounded-l-lg">
+											<th scope="col" className="py-3 text-gray-500 font-normal text-sm text-left">
 												Name
 											</th>
-											<th scope="col" className=" py-3" width="120">
+											<th scope="col" className="py-3 text-gray-500 font-normal text-sm" width="120">
 												Date
 											</th>
-											<th scope="col" className=" py-3 rounded-r-lg" width="80">
+											<th scope="col" className="py-3 text-gray-500 font-normal text-sm text-right" width="80">
 												Amount
 											</th>
 										</tr>
@@ -127,12 +127,12 @@ export default function Dashboard() {
 												<tr key={index}>
 													<td className="py-2">
 														<div className="flex items-center">
-															<img src={item.name.avatar} width={40} height={40} className="rounded-3xl" />
-															<span className="font-bold ml-2">{item.name.name}</span>
+															<img src={item.name.avatar} width={40} height={40} className="rounded-xl" />
+															<span className="font-bold ml-3 font-sans">{item.name.name}</span>
 														</div>
 													</td>
-													<td>{item.date}</td>
-													<td className="text-right font-bold">${item.amount}</td>
+													<td className="text-gray-500 text-sm">{item.date}</td>
+													<td className="text-right font-bold text-sm font-sans">${item.amount}</td>
 												</tr>
 											);
 										})}
@@ -168,16 +168,16 @@ export default function Dashboard() {
 					<div className="mt-4">
 						<div className="grid grid-cols-2 gap-4">
 							<div>
-								<div className="border border-gray-300 rounded-xl h-14 w-100 flex justify-between px-3 items-center text-center">
+								<a className="btn hover:bg-gray-300  cursor-pointer border border-gray-300 rounded-xl h-14 w-100 flex justify-between px-3 items-center text-center">
 									<span>Send</span>
 									<img src={send} />
-								</div>
+								</a>
 							</div>
 							<div>
-								<div className="border border-gray-300 rounded-xl h-14 w-100 flex justify-between px-3 items-center text-center">
+								<a className="btn hover:bg-gray-300  cursor-pointer border border-gray-300 rounded-xl h-14 w-100 flex justify-between px-3 items-center text-center">
 									<span>Receive</span>
 									<img src={receive} />
-								</div>
+								</a>
 							</div>
 						</div>
 					</div>
